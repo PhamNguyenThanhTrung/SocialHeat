@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Blank</title>
+
+    <link href="/assets/vendor/css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Nhúng thư viện Chart.js -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/assets/vendor/js/scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <!-- Nhúng thư viện Chart.js -->
+    <style>
+    .colod {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+    }
+
+    .noew {
+        padding: 2%;
+        border-radius: 100px;
+    }
+
+    .list-group-item {
+        border: none;
+    }
+    </style>
+
+    <div class="colod" style="font-size: 14px;">
+        <div class="row noew">
+            <div class="col-lg-2 ">
+
+            <nav class="navbar navbar-expand-lg navbar-light  border-bottom" style="position: fixed ;z-index: 9999;">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle" hidden > Toggle Menu</button>
+                        <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="d-flex" id="wrapper" style="width:300px;">
+                                <!-- Sidebar-->
+                                <div class="border-end list-group-item-secondary1 " style=" border-radius: 20px;"
+                                    id="sidebar-wrapper">
+                                    <div class="sidebar-heading list-group-item-secondary" style="border-radius:10px">
+                                        <p style=" font-size: 25px;"><strong><span class="colored-text text-lg "
+                                                    style="  background-color: DarkBlue;color: white;border-radius:5%;padding-right:5px;
+                                                    padding-left:5px">SOCIAL</span>HEAT</strong>
+                                        </p>
+                                    </div>
+                                    <div class="list-group list-group-flush " border:none style="width:75%">
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="dashboard.html"><img src="/assets/img/dashboard.svg"><strong> Dashboard</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="product.html"><img src="/assets/img/product.svg"><strong> Product</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="productManager.html"><img src="/assets/img/productt.svg"><strong> Product Advcant</strong> </a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="#!"><img src="/assets/img/storea.svg"><strong> Profile</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="supplier.html"><img src="/assets/img/supplier.svg"><strong> Supplier</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="#!"><img src="/assets/img/change.svg"><strong> Change Password</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+                                            aria-expanded="false" aria-controls="collapseWidthExample" href="#!"><img src="/assets/img/admin.svg"><strong> Admin</strong></a>
+            
+            
+            
+                                        <div style="min-height: 120px;">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                <div class="card card-body list-group-item-secondary "
+                                                    style="width: 200px;border:none;">
+            
+                                                    <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>
+                                                        User</li>
+                                                    <li class="list-group-item list-group-item-secondary" style="line-height: 0.5;">
+                                                        <i class="bi bi-dot"></i>Configuration
+                                                        </li>
+                                                    <!-- <!-- <li class="list-group-item list-group-item-secondary "><i
+                                                            class="bi bi-dot"></i>An item</li>
+                                                    <li class="list-group-item list-group-item-secondary"><i class="bi bi-dot"></i>A
+                                                        second item</li> -->
+                                                    <!-- <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>An item</li>
+                                                    <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>A second item</li> -->
+            
+            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="container">
+                                        <div class="row mt-5 pt-5">
+                                            <div class="col">
+                                                <div class="circular-image small">
+                                                    <img src="/assets/img/undraw_profile.svg" alt="Profile Image">
+            
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                Thành Trung
+                                            </div>
+                                            <div class="col">
+            
+                                                <i class="bi bi-gear"></i>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Page content wrapper-->
+            
+                            </div>
+                    </div>
+                </nav>
+
+            </div>
+
+
+            <div class="col-lg-10" style="padding-left:100px">
+
+
+              
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Product Manager</h1>
+
+</div>
+
+<div class="hew bg-light text-dark container" style="min-width: 100%; overflow-x: auto;" > 
+<nav class="hew bg-light text-dark container-fluid" style="min-width: 600px; overflow-x: auto;">
+
+
+<style>
+    @media (max-width: 600px) {
+        nav {
+            min-width: 600px;
+            overflow-x: auto;
+        }
+    }
+</style>
+
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3 ">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="">
+        <!-- Các phần tử con của phần tử sẽ sử dụng flexbox layout -->
+
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Topbar Search -->
+                <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search bg-white ">
+                    <div class="input-group ">
+                        <div class="input-group-append">
+                            <button class="btn " type="button">
+                            <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control border-0 small " placeholder="Search Code/Name..."
+                            aria-label="Search" aria-describedby="basic-addon2">
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-3">
+                <!-- Topbar Search -->
+                <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search bg-white">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <button class="btn " type="button">
+                            <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control border-0 small" placeholder="Search for..."
+                            aria-label="Search" aria-describedby="basic-addon2">
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3 ">
+                <!-- Topbar Search -->
+                <div class="dropdown bg-white container">
+    <button class="btn custom-bg-white dropdown-toggle dropdown-toggle-end" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Supplier
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+
+            </div>
+
+
+            <div class="col-md-3">
+                <!-- Topbar Search -->
+                <div class="dropdown bg-white">
+    <button class="btn custom-bg-white dropdown-toggle dropdown-toggle-end" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Category
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <br>
+    <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ">
+                <div class="input-group input-group-sm mb-3 ">
+                    <div class="input-group-prepend">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <h6 class="py-2 pr-4 text-secondary">Price <h6>
+
+                            </div>
+                            <div class="col-lg-10 d-flex">
+
+                                <input type="text" class="form-control bg-white border-0" placeholder="From"
+                                    aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                <div class="input-group-prepend">
+                                    <h5 class="" style="padding:5px ">- <h5>
+                                </div>
+                                <input type="text" class="form-control bg-white border-0" placeholder="To"
+                                    aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-4">
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ">
+                <div class="input-group input-group-sm mb-3 ">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h6 class="py-2 pr-4 text-secondary">Quantity <h6>
+
+                        </div>
+                        <div class="col-lg-9 d-flex">
+
+                            <input type="text" class="form-control bg-white border-0" placeholder="From"
+                                aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="input-group-prepend">
+                                <h5 style="padding:5px ">- <h5>
+                            </div>
+                            <input type="text" class="form-control bg-white border-0" placeholder="To"
+                                aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-md-4">
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ">
+                <div class="input-group input-group-sm mb-3 ">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h6 class="py-2 pr-4 text-secondary">Shipping <h6>
+
+                        </div>
+                        <div class="col-lg-9 d-flex">
+
+                            <input type="text" class="form-control bg-white border-0" placeholder="From"
+                                aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="input-group-prepend">
+                                <h5 style="padding:5px ">- <h5>
+                            </div>
+                            <input type="text" class="form-control bg-white border-0" placeholder="To"
+                                aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+
+    </div>
+   
+
+</nav>
+<div class="d-sm-flex align-items-center justify-content-between " >
+        <h1 class=""></h1>
+        <div>
+        <button
+                style="  color: white"
+                class="btn btn-primary align-items-end" data-toggle="modal" data-target="#chartPopup">Import
+                product</button>
+           
+            <button
+                style="  background-color: DarkBlue;color: white"
+                class="btn btn-primary align-items-end" data-toggle="modal" data-target="#chartPopup">Export
+                product</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#chartPopup">Xem Biểu Đồ</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="d-sm-flex align-items-center justify-content-between mb-4 ">
+
+
+    <div class="modal fade" id="chartPopup" tabindex="-1" role="dialog" aria-labelledby="chartPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <!-- Đổi modal-lg cho modal lớn hơn -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chartPopupLabel">Biểu Đồ Doanh Thu</h5>
+                    <button type="button" class="close btn btn-info" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <p>Product Name</p>
+                                <p>Supplier</p>
+
+                                <p>Ricing</p>
+                                <p>Supplier Link</p>
+                            </div>
+                            <div class="col-lg-3"><strong>
+                                    <p>Dolorunisa </p>
+                                    <p>434</p>
+
+                                    <p>1000</p>
+                                    <p>Supplie</p>
+                                </strong></div>
+                        </div>
+
+
+
+                    </table>
+                    <canvas id="revenueChart" width="400" height="200"></canvas>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+        // Sample data for revenue từng ngày (7 ngày gần đây)
+        var revenueData = [100, 75, 120, 90, 150, 110, 140];
+
+        // Đối tượng canvas để vẽ biểu đồ
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+
+        // Cấu hình biểu đồ cột
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: revenueData,
+                    backgroundColor: '#0099FF', // Màu xanh đậm cho các cột
+                    borderColor: '#0099FF',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        barPercentage: 0.5
+                    }]
+                }
+            }
+        });
+
+
+
+    });
+    </script>
+
+    <!-- Load Bootstrap and Chart.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+</div><nav class="hew bg-light text-dark container" style="">
+<div class="bg-light container"style="padding-left:30px;min-width: 600px; overflow-x: auto;">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4 bg-light">
+        <div>
+            <h3 class="pr-5 align-items-start" style="margin-bottom: 10px;color:darkblue;padding-top:10%">Result</h3>
+            <p class="text-secondary">Total product: 120.549</p>
+        </div>
+    </div>
+    <div class="table-responsive d-md-table">
+        <table class="table">
+
+            <thead>
+
+                <tr>
+                    <th scope="col">
+                        <input type="checkbox">
+
+                    </th>
+                    <th scope="col" class="text-muted">P CODE</th>
+                    <th scope="col" class="text-muted">IMG</th>
+                    <th scope="col" class="text-muted">P NAME</th>
+                    <th scope="col" class="text-muted">SKU</th>
+                    <th scope="col" class="text-muted">UPC</th>
+                    <th scope="col" class="text-muted">SUPPLIER</th>
+                    <th scope="col" class="text-muted">PRICE</th>
+                    <th scope="col" class="text-muted">SHIPPING FEE</th>
+                    <th scope="col" class="text-muted">SUPPLIER URL</th>
+                    <th scope="col" class="text-muted">CATEGORY</th>
+                    <th scope="col" class="text-muted ">STOCK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>P001</td>
+                    <td><img src="/assets/img/image.svg" alt="Product Image"></td>
+                    <td>Product 1</td>
+                    <td>SKU001</td>
+                    <td>UPC001</td>
+                    <td>Supplier A</td>
+                    <td>$50.00</td>
+                    <td>$5.00</td>
+                    <td><a href="#">Supplier URL</a></td>
+                    <td>Category 1</td>
+                    <td>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="First Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="Second Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="your_second_image.jpg" hidden alt="Second Image" width="50"
+                                            height="50">
+                                        <div class="badge" width="50" height="50">+10</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <style>
+                        .image-container {
+                            position: relative;
+                            display: inline-block;
+                        }
+
+                        .badge {
+
+                            top: 0;
+                            background-color: rgb(92, 180, 124);
+                            right: 0;
+
+                            color: white;
+                            width: 30px;
+                            height: 30px;
+                            padding: 5px 5px;
+                            border-radius: 50%;
+                        }
+                        </style>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>P002</td>
+                    <td><img src="/assets/img/image.svg" alt="Product Image"></td>
+                    <td>Product 2</td>
+                    <td>SKU002</td>
+                    <td>UPC002</td>
+                    <td>Supplier B</td>
+                    <td>$40.00</td>
+                    <td>$4.00</td>
+                    <td><a href="#">Supplier URL</a></td>
+                    <td>Category 2</td>
+                    <td>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="First Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="Second Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="your_second_image.jpg" hidden alt="Second Image" width="50"
+                                            height="50">
+                                        <div class="badge" width="50" height="50">+10</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </td>
+                </tr>
+                <!-- Thêm dòng dữ liệu khác ở đây -->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>P002</td>
+                    <td><img src="/assets/img/image.svg" alt="Product Image"></td>
+                    <td>Product 2</td>
+                    <td>SKU002</td>
+                    <td>UPC002</td>
+                    <td>Supplier B</td>
+                    <td>$40.00</td>
+                    <td>$4.00</td>
+                    <td><a href="#">Supplier URL</a></td>
+                    <td>Category 2</td>
+                    <td>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="First Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="Second Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="your_second_image.jpg" hidden alt="Second Image" width="50"
+                                            height="50">
+                                        <div class="badge" width="50" height="50">+10</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>P002</td>
+                    <td><img src="/assets/img/image.svg" alt="Product Image"></td>
+                    <td>Product 2</td>
+                    <td>SKU002</td>
+                    <td>UPC002</td>
+                    <td>Supplier B</td>
+                    <td>$40.00</td>
+                    <td>$4.00</td>
+                    <td><a href="#">Supplier URL</a></td>
+                    <td>Category 2</td>
+                    <td>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="First Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="Second Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="your_second_image.jpg" hidden alt="Second Image" width="50"
+                                            height="50">
+                                        <div class="badge" width="50" height="50">+10</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>P002</td>
+                    <td><img src="/assets/img/image.svg" alt="Product Image"></td>
+                    <td>Product 2</td>
+                    <td>SKU002</td>
+                    <td>UPC002</td>
+                    <td>Supplier B</td>
+                    <td>$40.00</td>
+                    <td>$4.00</td>
+                    <td><a href="#">Supplier URL</a></td>
+                    <td>Category 2</td>
+                    <td>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="First Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="/assets/img/undraw_profile.svg" alt="Second Image" width="30"
+                                            height="30">
+                                    </div>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="image-container">
+                                        <img src="your_second_image.jpg" hidden alt="Second Image" width="50"
+                                            height="50">
+                                        <div class="badge" width="50" height="50">+10</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </tbody>
+
+        </table>
+        <!-- phân trang -->
+        <div class="row justify-content-between">
+    <div class="col-lg-4 col-md-6"> <!-- Thêm class col-md-6 cho responsive -->
+        <div class="py-3">
+            <div class="d-flex align-items-center">
+                <div class="col-lg-2 col-md-3 align-items-right"> <!-- Thêm class col-md-3 cho responsive -->
+                    <span>Show:</span>
+                </div>
+                <div class="col-lg-3 col-md-6 ml-2"> <!-- Thêm class col-md-6 cho responsive và điều chỉnh margin -->
+                    <div class="input-group">
+                        <input class="form-control text-center text-secondary" id="inputQuantity" name="quantity" type="number" value="5" style="max-width: 7rem">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-3"> <!-- Thêm class col-md-3 cho responsive -->
+                    entries <span class="text-secondary">1-5 of 25</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 py-3" style="padding-left: 0;"> <!-- Thêm class col-md-6 cho responsive -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-end"> <!-- Thêm class justify-content-end để căn phải -->
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+    </div>
+
+
+
+
+
+</div>
+<!-- Content Row -->
+
+            </div>
+        </div>
+
+    </div>
+
+
+</html>

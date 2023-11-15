@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Blank</title>
+
+    <link href="/assets/vendor/css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Nhúng thư viện Chart.js -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/assets/vendor/js/scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <!-- Nhúng thư viện Chart.js -->
+    <style>
+    .colod {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+    }
+
+    .noew {
+        padding: 2%;
+        border-radius: 100px;
+    }
+
+    .list-group-item {
+        border: none;
+    }
+    </style>
+
+    <div class="colod" style="font-size: 14px;">
+        <div class="row noew">
+            <div class="col-lg-2 ">
+
+            <nav class="navbar navbar-expand-lg navbar-light  border-bottom" style="position: fixed ;z-index: 9999;">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle" hidden > Toggle Menu</button>
+                        <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="d-flex" id="wrapper" style="width:300px;">
+                                <!-- Sidebar-->
+                                <div class="border-end list-group-item-secondary1 " style=" border-radius: 20px;"
+                                    id="sidebar-wrapper">
+                                    <div class="sidebar-heading list-group-item-secondary" style="border-radius:10px">
+                                        <p style=" font-size: 25px;"><strong><span class="colored-text text-lg "
+                                                    style="  background-color: DarkBlue;color: white;border-radius:5%;padding-right:5px;
+                                                    padding-left:5px">SOCIAL</span>HEAT</strong>
+                                        </p>
+                                    </div>
+                                    <div class="list-group list-group-flush " border:none style="width:75%">
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="dashboard.html"><img src="/assets/img/dashboard.svg"><strong> Dashboard</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="product.html"><img src="/assets/img/product.svg"><strong> Product</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="productManager.html"><img src="/assets/img/productt.svg"><strong> Product Advcant</strong> </a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="#!"><img src="/assets/img/storea.svg"><strong> Profile</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="supplier.html"><img src="/assets/img/supplier.svg"><strong> Supplier</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3" href="#!"><img src="/assets/img/change.svg"><strong> Change Password</strong></a>
+                                        <a class="list-group-item list-group-item-action list-group-item-secondary p-3"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+                                            aria-expanded="false" aria-controls="collapseWidthExample" href="#!"><img src="/assets/img/admin.svg"><strong> Admin</strong></a>
+            
+            
+            
+                                        <div style="min-height: 120px;">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                <div class="card card-body list-group-item-secondary "
+                                                    style="width: 200px;border:none;">
+            
+                                                    <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>
+                                                        User</li>
+                                                    <li class="list-group-item list-group-item-secondary" style="line-height: 0.5;">
+                                                        <i class="bi bi-dot"></i>Configuration
+                                                        </li>
+                                                    <!-- <!-- <li class="list-group-item list-group-item-secondary "><i
+                                                            class="bi bi-dot"></i>An item</li>
+                                                    <li class="list-group-item list-group-item-secondary"><i class="bi bi-dot"></i>A
+                                                        second item</li> -->
+                                                    <!-- <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>An item</li>
+                                                    <li class="list-group-item list-group-item-secondary "
+                                                        style="line-height: 0.5;"><i class="bi bi-dot"></i>A second item</li> -->
+            
+            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                        <div class="container-fluid" style="width:300px">
+                                            <div class="row d-flex">
+                                                <div class="col-lg-3">
+                                                    <div class="circular-image small">
+                                                        <img src="/assets/img/undraw_profile.svg" alt="Profile Image">
+                
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-5 mt-3">
+                                                  <strong>Thành Trung </strong>  
+                                                </div>
+                                                <div class="col-lg-2 mt-3">
+                
+                                                    <i class="bi bi-gear"></i>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+            
+                                <!-- Page content wrapper-->
+            
+                            </div>
+                    </div>
+                </nav>
+
+            </div>
+
+
+            <div class="col-lg-10" style="padding-left:100px">
+
+
+               
+<style>
+
+</style>
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800" data-toggle="modal" data-target="#exampleModal">Supplier</h1>
+    <div class="modal fade" id="chartPopup" tabindex="-1" role="dialog" aria-labelledby="chartPopupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" style=" max-width: 500px;max-height: 600px;" role="document">
+            <!-- Đổi modal-lg cho modal lớn hơn -->
+            <div class="modal-content">
+                <div class="modal-header">
+                   
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <div class="row">
+                           
+                            <div class="col-lg-12"><strong>
+                                   
+                                    <p>
+                                    <div class=" bg-white">
+                                    <div class="row">
+                            <div class="col-lg-3">
+                                <h6 class="py-2 pr-4 text-secondary ">Suplier Name <h6>
+
+                            </div>
+                            <div class="col-lg-9 d-flex">
+
+                                <input type="text" class="form-control bg-white " placeholder="Today Decor"
+                                    aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            
+                               
+                            </div>
+                        </div>
+                                       
+
+                                            
+                                      <br>
+                                        <button class="btn btn-primary custom-bg-white  container" style="border:solid 1px #B4CDCD;">
+
+                                            Category
+                                        </button>
+                                      
+                                    </div>
+                                    </p>
+
+
+
+                                  
+                                </strong>
+                            </div>
+                        </div>
+
+
+
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<div class="bg-light" style="padding: 20px;border-radius:10px;">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4 bg-light">
+
+
+        <div>
+
+            <button
+                style="  background-color: #000033;color: white;border-radius:5%;padding:10px;"
+                class="btn custom-darkblue-btn align-items-end" data-toggle="modal" data-target="#chartPopup">Add
+                Supplier</button>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <table class="table bg-light " style="border-radius:10px;color:darkblue">
+
+        <thead>
+            <tr class="text-secondary">
+                <th>P CODE</th>
+                <th>NAME</th>
+             
+                <th>TOTAL SKU</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="textin">
+                <td>001</td>
+                <td>Product Lorem Ipsum is simply dummy text </td>
+            
+                <td>50</td>
+               
+            </tr>
+            <tr class="textin">
+                <td>002</td>
+                <td>Product Lorem Ipsum is simply dummy text </td>
+              
+                <td>30</td>
+               
+            </tr>
+            <tr class="textin">
+                <td>003</td>
+                <td>Product Lorem Ipsum is simply dummy text </td>
+              
+                <td>25</td>
+             
+            </tr>
+            <tr class="textin">
+                <td>004</td>
+                <td>Product Lorem Ipsum is simply dummy text </td>
+               
+                <td>40</td>
+              
+            </tr>
+            <tr class="textin">
+                <td>005</td>
+                <td>Product Lorem Ipsum is simply dummy text </td>
+              
+                <td>20</td>
+              
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row " style="height:50px">
+        <div class="col-lg-4 ">
+
+            <div class=" py-5">
+                <div class="d-flex align-items-center row">
+                    <div class="col-lg-2 align-items-right"> <span class="align-items-end">Show:</span></div>
+                    <div class=" col-lg-3">
+
+                        <div class="input-group ml-2">
+                            <div class="input-group">
+
+                                <input class="form-control text-center text-secondary" id="inputQuantity"
+                                    name="quantity" type="number" value="5" style="max-width: 7rem">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 ">entries <span class="text-secondary">1-5 of 25</span> </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-lg-6 py-5" style="padding-left: 28%;">
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 50%;
+    }
+    </style>
+
+
+
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4 bg-light">
+        <div>
+            <h3 class="pr-5 align-items-start" style="margin-bottom: 10px;color:darkblue"></h3>
+
+        </div>
+    </div>
+</div>
+<!-- Content Row -->
+
+            </div>
+        </div>
+
+    </div>
+
+
+</html>
